@@ -7,4 +7,7 @@ package com.goingao.develop.toolkit;
  * @date 2019-03-18
  */
 public class LocalCache {
+    public static void main(String[] args) {
+
+    }
 }
