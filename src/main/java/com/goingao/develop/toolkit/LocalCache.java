@@ -9,5 +9,7 @@ package com.goingao.develop.toolkit;
 public class LocalCache {
     public static void main(String[] args) {
         System.out.printf("yes");
+
+
     }
 }
