@@ -1,4 +1,4 @@
-package com.goingao.develop.toolkit;
+package com.goingao.develop.toolkit.guava;
 
 import com.google.common.cache.Cache;
 import com.google.common.cache.CacheBuilder;
