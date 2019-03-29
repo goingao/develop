@@ -1,6 +1,9 @@
 package com.goingao.develop.toolkit.joda;
 
 import org.joda.time.DateTime;
+import org.joda.time.Days;
+import org.joda.time.Duration;
+import org.joda.time.Interval;
 
 import java.util.Locale;
 
@@ -49,6 +52,27 @@ public class TimeCheat {
         System.out.println(now6.toString("yyyy-MM-dd HH:mm:ss SSS"));
         DateTime now7 = now.secondOfMinute().roundFloorCopy();
         System.out.println(now7.toString("yyyy-MM-dd HH:mm:ss SSS"));
+
+        // Interval
+        DateTime start = new DateTime(2004, 1, 1, 0, 0, 0, 0);
+        DateTime end = new DateTime(2005, 1, 1, 0, 0, 0, 0);
+        Interval interval = new Interval(start, end);
+
+        DateTime start2 = interval.getStart();
+        DateTime end2 = interval.getEnd();
+        DateTime testDate = new DateTime(2004, 2, 1, 0, 0, 0, 0);
+        boolean contains = interval.contains(testDate);
+
+        // Duration 表示的目前的时刻再持续多久时间，与之前的Interval时间区间该概念类似，不过单位是毫秒。
+        DateTime startDuration = new DateTime(1975, 5, 26, 0, 0, 0);
+        Duration oneThousandMillis = new Duration(1000);
+        DateTime endDuration = start.plus(oneThousandMillis);
+
+        // Period
+        DateTime startPeriod = new DateTime(1975, 5, 26, 0, 0, 0);
+        DateTime endPeriod = new DateTime(1975, 5, 28, 0, 0, 0);
+        Days days = Days.daysBetween(startPeriod, endPeriod);
+        System.out.println(days.getDays());
 
     }
 }
