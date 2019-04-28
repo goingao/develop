@@ -5,9 +5,12 @@ import java.text.MessageFormat;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * @author goingao
+ */
 public class WriteFile {
 
-    private void writeFileContext(List<String> strings, String path) throws Exception {
+    public static void writeFileContext(List<String> strings, String path) throws Exception {
         File file = new File(path);
         // 如果没有文件就创建
         if (!file.isFile()) {
