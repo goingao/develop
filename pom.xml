@@ -40,6 +40,16 @@
         </dependency>
 
         <dependency>
+            <groupId>com.wisdom</groupId>
+            <artifactId>spring-boot-starter-hello</artifactId>
+            <version>1.0-REALEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>com.example</groupId>
+            <artifactId>demo</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <dependency>
             <groupId>com.google.guava</groupId>
             <artifactId>guava</artifactId>
             <version>27.0.1-jre</version>
